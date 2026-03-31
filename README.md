@@ -86,7 +86,8 @@ See [WALKTHROUGH.md](./WALKTHROUGH.md) for the full step-by-step lab guide.
 
 ## Author
 
-Khaneil Campbell | khancam15
+Khaneil Campbell | khancam15 
+
 Cybersecurity | SOC Analyst | Blue Team
 
 
