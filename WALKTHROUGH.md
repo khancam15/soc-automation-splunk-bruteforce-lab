@@ -13,22 +13,22 @@ This walkthrough documents the end-to-end steps taken to complete the SOC Automa
 - **Hypervisor:** VirtualBox 7.2.6
 - **VMs:**
   - Kali Linux (attacker) — Host-only adapter + NAT
-  - Windows 10 (target) — Host-only adapter + NAT
+  - Windows 11 (target) — Host-only adapter + NAT
 
 ### Network Configuration
 - Host-only adapter: allows VM-to-VM communication
 - NAT adapter: allows internet access for package installation
-- Verified connectivity between Kali and Windows using `ping`
+- Verified connectivity between Kali and Windows 11 using `ping`
 
-### Splunk Universal Forwarder (Windows VM)
-- Installed Splunk Universal Forwarder on the Windows 10 VM
+### Splunk Universal Forwarder (Windows 11 VM)
+- Installed Splunk Universal Forwarder on the Windows 11 VM
 - Configured `inputs.conf` to monitor Windows Security Event Logs:
   ```
   [WinEventLog://Security]
   disabled = 0
   index = main
   ```
-- Pointed forwarder output to Splunk Enterprise (running on the Windows VM or host)
+- Pointed forwarder output to Splunk Enterprise (running on the Windows 11 VM or host)
 
 ---
 
@@ -38,9 +38,9 @@ This walkthrough documents the end-to-end steps taken to complete the SOC Automa
 - **Hydra** (Kali Linux) — SMB brute-force
 
 ### Steps
-1. Confirmed SMB (port 445) was open on the Windows target using `nmap`
+1. Confirmed SMB (port 445) was open on the Windows 11 target using `nmap`
 2. Created a wordlist for the brute-force attempt
-3. Executed Hydra against the Windows target:
+3. Executed Hydra against the Windows 11 target:
    ```bash
    hydra -l administrator -P /usr/share/wordlists/rockyou.txt smb://<target-ip>
    ```

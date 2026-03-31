@@ -21,7 +21,7 @@ This lab simulates a real-world SMB brute-force attack in a controlled virtual e
 | Tool | Purpose |
 |---|---|
 | Kali Linux | Attacker machine — SMB brute-force simulation |
-| Windows 10 VM | Target machine |
+| Windows 11 VM | Target machine |
 | Splunk Enterprise | Log ingestion, detection, and alerting |
 | Splunk Universal Forwarder | Windows event log forwarding |
 | Python 3 | Automated case note generation via REST API |
@@ -33,7 +33,7 @@ This lab simulates a real-world SMB brute-force attack in a controlled virtual e
 ## 🏗️ Lab Architecture
 
 ```
-[Kali Linux VM] ---(Host-only Network)---> [Windows 10 VM]
+[Kali Linux VM] ---(Host-only Network)---> [Windows 11 VM]
                                                   |
                                     [Splunk Universal Forwarder]
                                                   |
@@ -48,7 +48,7 @@ This lab simulates a real-world SMB brute-force attack in a controlled virtual e
 
 ## 🎯 Lab Objectives
 
-- Simulate an SMB brute-force attack from Kali Linux targeting a Windows host
+- Simulate an SMB brute-force attack from Kali Linux targeting a Windows 11 host
 - Configure Splunk Universal Forwarder to ship Windows Security Event Logs (Event ID 4625)
 - Build a Splunk detection query to identify brute-force behavior
 - Use Python and the Splunk REST API to programmatically pull alert data
