@@ -84,6 +84,9 @@ See [WALKTHROUGH.md](./WALKTHROUGH.md) for the full step-by-step lab guide.
 
 ## 👤 Author
 
-**KC** | `khancam15`  
-Service Desk Technician | Columbia University CUIT  
-Cybersecurity Home Lab Series
+## Author
+
+Khaneil Campbell | khancam15
+Cybersecurity | SOC Analyst | Blue Team
+
+
