@@ -1,0 +1,7 @@
+index=main sourcetype="WinEventLog:Security" EventCode=4625
+| where NOT (Source_Network_Address="127.0.0.1" OR Source_Network_Address="::1")
+| bucket _time span=5m
+| stats count as failed_logins by Account_Name, Source_Network_Address, _time
+| where failed_logins >= 10
+| eval severity="High"
+| table _time Account_Name Source_Network_Address failed_logins severity
