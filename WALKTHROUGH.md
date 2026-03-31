@@ -24,7 +24,7 @@ This walkthrough documents the end-to-end steps taken to complete the SOC Automa
 ### Windows 11 Static IP Configuration
 Ran `ipconfig` in PowerShell on the Windows 11 VM to confirm the static IP assignment on the host-only adapter.
 
-![Windows 11 Static IP Configuration](screenshots/01__windows_static_ip_.png)
+![Windows 11 Static IP Configuration](screenshots/01.%20windows%20static%20ip%20.png)
 
 ### Splunk Universal Forwarder (Windows 11 VM)
 - Installed Splunk Universal Forwarder on the Windows 11 VM
@@ -63,12 +63,12 @@ for i in {1..15}; do smbclient -L //10.10.10.10 -U administrator%wrongpass > /de
 #### Screenshot — Kali Ping Success & Brute Force Execution
 Confirmed 0% packet loss to the Windows 11 target, then launched the SMB brute-force loop.
 
-![Kali Ping Success and SMB Brute Force](screenshots/02__kali_ping_success.png)
+![Kali Ping Success and SMB Brute Force](screenshots/02.%20kali%20ping%20success.png)
 
-#### Screenshot — SMB Brute Force Failures (NT_STATUS_LOGON_FAILURE → NT_STATUS_ACCOUNT_LOCKED_OUT)
+#### Screenshot — SMB Brute Force Failures
 The repeated failed attempts triggered the Windows 11 account lockout policy, confirming the brute-force simulation was successful and generating Event ID 4625 logs.
 
-![Kali SMB Brute Force Failures](screenshots/03__kaili_smb_bruteforce.png)
+![Kali SMB Brute Force Failures](screenshots/03.%20kaili%20smb%20bruteforce.png)
 
 ---
 
@@ -86,7 +86,7 @@ index=main sourcetype="WinEventLog:Security" EventCode=4625
 ```
 Result: **81 failed logon events** from source IP `10.10.10.20` targeting the `administrator` account.
 
-![Splunk Event ID 4625 Aggregation](screenshots/04__splunk_4625_aggregation.png)
+![Splunk Event ID 4625 Aggregation](screenshots/04.%20splunk%204625%20aggregation.png)
 
 ### Detection Query 2 — Threshold-Based Brute Force Detection (SPL)
 ```spl
@@ -100,7 +100,7 @@ index=main sourcetype="WinEventLog:Security" EventCode=4625
 ```
 Result: 8 time-bucketed alerts all rated **High severity**, confirming sustained brute-force activity from `10.10.10.20`.
 
-![Splunk Threshold Detection](screenshots/05__splunk_threshold_detection_.png)
+![Splunk Threshold Detection](screenshots/05.%20splunk%20threshold%20detection%20.png)
 
 ### Detection Query 3 — EventCode Distribution (SPL)
 ```spl
@@ -109,7 +109,7 @@ index=main sourcetype="WinEventLog:Security"
 ```
 Reviewed the full EventCode distribution across 376 events to validate log coverage and confirm 4625 was the dominant failure code.
 
-![Splunk EventCode Distribution](screenshots/06__splunk_eventcode_distribution.png)
+![Splunk EventCode Distribution](screenshots/06.%20splunk%20eventcode%20distribution.png)
 
 ---
 
@@ -129,12 +129,12 @@ Reviewed the full EventCode distribution across 376 events to validate log cover
 ### Screenshot — Python Script Execution
 The Python script successfully queried the Splunk REST API, identified **2 alerts**, and formatted case notes with severity ratings and recommended actions.
 
-![Python Script Execution](screenshots/07__python_script_execution_.png)
+![Python Script Execution](screenshots/07.%20python%20script%20execution%20.png)
 
 ### Screenshot — Generated Case Note Output
 The auto-generated case note (`soc_case_20260329_150145.md`) captured both High severity alerts with full context: host, account, source IP, failed login count, logon type, and recommended triage actions.
 
-![Generated Case Note](screenshots/08__generated_case_note.png)
+![Generated Case Note](screenshots/08.%20generated%20case%20note.png)
 
 ### Sample Case Note Output
 ```
@@ -162,7 +162,7 @@ Alerts found: 2
 
 ## Phase 5: Validation & Evidence Collection
 
-- Captured screenshots of all 5 lab phases (see `/screenshots/`)
+- Captured screenshots of all lab phases (see `/screenshots/`)
 - Confirmed end-to-end pipeline: Attack → Detection → Automated Case Note Output
 - Pushed all configs, notes, and screenshots to GitHub
 
