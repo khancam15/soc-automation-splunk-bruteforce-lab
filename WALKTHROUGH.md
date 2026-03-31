@@ -124,7 +124,7 @@ Reviewed the full EventCode distribution across 376 events to validate log cover
 2. Run saved detection search via API call
 3. Parse returned JSON results (account, source IP, failed logins, severity, timestamp)
 4. Format structured case note in Markdown
-5. Write case note to `/notes/` directory with timestamped filename
+5. Write case note to working directory with timestamped filename
 
 ### Screenshot — Python Script Execution
 The Python script successfully queried the Splunk REST API, identified **2 alerts**, and formatted case notes with severity ratings and recommended actions.
@@ -164,7 +164,7 @@ Alerts found: 2
 
 - Captured screenshots of all lab phases (see `/screenshots/`)
 - Confirmed end-to-end pipeline: Attack → Detection → Automated Case Note Output
-- Pushed all configs, notes, and screenshots to GitHub
+- Pushed all configs and screenshots to GitHub
 
 ---
 
