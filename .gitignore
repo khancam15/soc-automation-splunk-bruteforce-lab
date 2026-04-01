@@ -1,1 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.env
+*.log
+
+# Virtual environments
+venv/
+.venv/
+
+# Splunk artifacts
+*.spl.rtf
+*.tgz
+
+# Editor files
+.vscode/
+.idea/
