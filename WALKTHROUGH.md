@@ -68,7 +68,7 @@ Confirmed 0% packet loss to the Windows 11 target, then launched the SMB brute-f
 #### Screenshot — SMB Brute Force Failures
 The repeated failed attempts triggered the Windows 11 account lockout policy, confirming the brute-force simulation was successful and generating Event ID 4625 logs.
 
-![Kali SMB Brute Force Failures](screenshots/03.%20kaili%20smb%20bruteforce.png)
+![Kali SMB Brute Force Failures](screenshots/03.%20kali%20smb%20bruteforce.png)
 
 ---
 
