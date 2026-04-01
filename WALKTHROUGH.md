@@ -24,7 +24,7 @@ This walkthrough documents the end-to-end steps taken to complete the SOC Automa
 ### Windows 11 Static IP Configuration
 Ran `ipconfig` in PowerShell on the Windows 11 VM to confirm the static IP assignment on the host-only adapter.
 
-![Windows 11 Static IP Configuration](screenshots/01.%20windows%20static%20ip%20.png)
+![Windows 11 Static IP Configuration](screenshots/01.%20windows%20static%20ip.png)
 
 ### Splunk Universal Forwarder (Windows 11 VM)
 - Installed Splunk Universal Forwarder on the Windows 11 VM
