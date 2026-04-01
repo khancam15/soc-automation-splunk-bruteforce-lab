@@ -129,7 +129,7 @@ Reviewed the full EventCode distribution across 376 events to validate log cover
 ### Screenshot — Python Script Execution
 The Python script successfully queried the Splunk REST API, identified **2 alerts**, and formatted case notes with severity ratings and recommended actions.
 
-![Python Script Execution](screenshots/07.%20python%20script%20execution%20.png)
+![Python Script Execution](screenshots/07.%20python%20script%20execution.png)
 
 ### Screenshot — Generated Case Note Output
 The auto-generated case note (`soc_case_20260329_150145.md`) captured both High severity alerts with full context: host, account, source IP, failed login count, logon type, and recommended triage actions.
