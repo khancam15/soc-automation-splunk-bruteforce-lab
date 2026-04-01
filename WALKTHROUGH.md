@@ -100,7 +100,7 @@ index=main sourcetype="WinEventLog:Security" EventCode=4625
 ```
 Result: 8 time-bucketed alerts all rated **High severity**, confirming sustained brute-force activity from `10.10.10.20`.
 
-![Splunk Threshold Detection](screenshots/05.%20splunk%20threshold%20detection%20.png)
+![Splunk Threshold Detection](screenshots/05.%20splunk%20threshold%20detection.png)
 
 ### Detection Query 3 — EventCode Distribution (SPL)
 ```spl
