@@ -111,9 +111,9 @@ See WALKTHROUGH.md for the full step-by-step guide.
 
 - queries/ (SPL detection queries)
 - screenshots/ (lab evidence)
-- SECURITY.md (security policy and reporting guidance)
 - .gitignore
 - README.md
+- SECURITY.md (security policy and reporting guidance)
 - WALKTHROUGH.md
 
 ## Author
