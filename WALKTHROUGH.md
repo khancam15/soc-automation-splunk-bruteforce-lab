@@ -184,7 +184,7 @@ Alerts found: 2
 
 - Captured screenshots of all lab phases (see `/screenshots/`)
 - Confirmed end-to-end pipeline: Attack → Detection → Automated Case Note Output
-- Pushed all configs and screenshots to GitHub
+- Pushed lab documentation, query artifacts, and screenshots to GitHub
 
 ### Pull Request Checklist (Recommended)
 - Detection logic updated and tested in Splunk

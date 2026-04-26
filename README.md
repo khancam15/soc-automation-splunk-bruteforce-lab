@@ -106,17 +106,13 @@ See the screenshots directory for evidence of each lab phase, including attack e
 
 See WALKTHROUGH.md for the full step-by-step guide.
 
-## Security Policy
-
-See SECURITY.md for disclosure and safe-use expectations.
-
 ## Core Project Files
 
-- LICENSE
-- SECURITY.md
-- .env.example
-- requirements.txt
-- .github/workflows/ci.yml
+- queries/ (SPL detection queries)
+- screenshots/ (lab evidence)
+- .gitignore
+- README.md
+- WALKTHROUGH.md
 
 ## Author
 
