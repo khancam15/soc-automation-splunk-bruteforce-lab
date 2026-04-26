@@ -8,7 +8,10 @@ __pycache__/
 *.py[cod]
 *.pyd
 .env
+.env.*
+*.env
 *.log
+*.sqlite
 
 # Virtual environments
 venv/
@@ -17,6 +20,18 @@ venv/
 # Splunk artifacts
 *.spl.rtf
 *.tgz
+
+# Secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+secrets.*
+
+# Local output artifacts
+soc_case_*.md
 
 # Editor files
 .vscode/

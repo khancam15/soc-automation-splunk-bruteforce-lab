@@ -4,6 +4,26 @@
 
 This walkthrough documents the end-to-end steps taken to complete the SOC Automation & Detection Engineering Lab, covering environment setup, attack simulation, Splunk detection, and Python-based case note automation.
 
+## Phase 0: Safety and Repository Pre-Checks
+
+### Lab Safety Requirements
+- Confirm explicit authorization for all systems in scope
+- Keep attack simulation traffic inside isolated lab networking only
+- Use non-production credentials and test-only accounts
+- Confirm no sensitive corporate or personal data is present in logs
+
+### Developer Security Pre-Checks
+- Store Splunk credentials and tokens in environment variables
+- Validate local files do not contain secrets before each commit
+- Redact sensitive fields from screenshots and exported notes
+- Use a least-privilege Splunk account for API automation
+
+### GitHub Hygiene Pre-Checks
+- Work from a feature branch, not directly on main
+- Keep pull requests small and scoped to one logical change
+- Add evidence for detection changes (query output or screenshot)
+- Ensure repository secret scanning is enabled
+
 ---
 
 ## Phase 1: Environment Setup
@@ -166,6 +186,13 @@ Alerts found: 2
 - Confirmed end-to-end pipeline: Attack → Detection → Automated Case Note Output
 - Pushed all configs and screenshots to GitHub
 
+### Pull Request Checklist (Recommended)
+- Detection logic updated and tested in Splunk
+- Documentation updated (README and walkthrough as needed)
+- Screenshots reviewed for sensitive data exposure
+- Commit history is clean and descriptive
+- Reviewer can reproduce expected results from repository contents
+
 ---
 
 ## Key Takeaways
@@ -175,6 +202,8 @@ Alerts found: 2
 - Automated SOC triage documentation using Python + Splunk REST API
 - Reinforced understanding of attacker techniques (T1110 - Brute Force) and defensive detection engineering
 - Observed real account lockout behavior (NT_STATUS_ACCOUNT_LOCKED_OUT) as a detection signal
+- Practiced secure developer workflow habits for cybersecurity portfolio projects
+- Improved repository quality with repeatable GitHub collaboration standards
 
 ---
 
