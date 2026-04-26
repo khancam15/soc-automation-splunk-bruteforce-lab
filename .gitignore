@@ -58,3 +58,6 @@ soc_case_*.md
 # Editor files
 .vscode/
 .idea/
+
+# Repository metadata folders to exclude
+.github/
