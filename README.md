@@ -110,6 +110,19 @@ See WALKTHROUGH.md for the full step-by-step guide.
 
 See SECURITY.md for disclosure and safe-use expectations.
 
+## Project Standards Files
+
+- LICENSE
+- CONTRIBUTING.md
+- CODE_OF_CONDUCT.md
+- CHANGELOG.md
+- .env.example
+- requirements.txt
+- .github/pull_request_template.md
+- .github/ISSUE_TEMPLATE/bug_report.md
+- .github/ISSUE_TEMPLATE/lab_change.md
+- .github/workflows/ci.yml
+
 ## Author
 
 Khaneil Campbell | khancam15
