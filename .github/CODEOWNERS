@@ -1,7 +1,0 @@
-# Default owner for all repository content
-* @khancam15
-
-# Security-sensitive paths
-SECURITY.md @khancam15
-.github/workflows/* @khancam15
-queries/* @khancam15
