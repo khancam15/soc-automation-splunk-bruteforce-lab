@@ -95,6 +95,7 @@ soc-automation-splunk-bruteforce-lab/
 |-- screenshots/      # Lab evidence and validation screenshots
 |-- .gitignore
 |-- README.md
+|-- SECURITY.md       # Lab and GitHub security practices
 |-- WALKTHROUGH.md    # Step-by-step walkthrough
 ```
 
