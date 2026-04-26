@@ -27,9 +27,34 @@ venv/
 *.key
 *.p12
 *.pfx
+*.kdbx
+*.ovpn
+*.mobileconfig
+*.crt
+*.cer
 id_rsa
 id_ed25519
+id_ecdsa
+id_dsa
+*.pub
 secrets.*
+*.secret
+*.secrets
+credentials.json
+service-account*.json
+
+# Cloud and tooling auth files
+.aws/
+.azure/
+.config/gcloud/
+.kube/
+
+# Terraform and IaC secrets/state
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+terraform.tfvars.json
 
 # Local output artifacts
 soc_case_*.md

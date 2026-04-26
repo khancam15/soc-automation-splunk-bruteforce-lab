@@ -1,0 +1,38 @@
+name: Security Guardrails
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  secret-and-policy-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Secret scan (Gitleaks)
+        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Block private key material in repo
+        run: |
+          set -euo pipefail
+          if grep -R --line-number --exclude-dir=.git --binary-files=without-match "BEGIN .*PRIVATE KEY" .; then
+            echo "Private key material detected in repository contents."
+            exit 1
+          fi
+
+      - name: Block obvious inline secrets in tracked files
+        run: |
+          set -euo pipefail
+          if grep -REn --exclude-dir=.git --exclude-dir=.github/workflows --binary-files=without-match "(password\s*=|token\s*=|api[_-]?key\s*=|aws_secret_access_key)" .; then
+            echo "Potential inline secret detected. Move secrets to environment variables."
+            exit 1
+          fi
