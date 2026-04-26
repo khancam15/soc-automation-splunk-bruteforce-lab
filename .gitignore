@@ -10,7 +10,6 @@ __pycache__/
 .env
 .env.*
 *.env
-!.env.example
 *.log
 *.sqlite
 
@@ -30,13 +29,10 @@ venv/
 *.kdbx
 *.ovpn
 *.mobileconfig
-*.crt
-*.cer
 id_rsa
 id_ed25519
 id_ecdsa
 id_dsa
-*.pub
 secrets.*
 *.secret
 *.secrets
