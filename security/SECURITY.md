@@ -1,31 +1,47 @@
-# Security Policy
+# Security Practices for Lab and GitHub Deployment
 
-## Scope
+This file defines the security baseline for running this lab and publishing it to GitHub.
 
-This repository is for authorized cybersecurity lab work only.
+## 1. Lab Security Practices
 
-- Use only isolated, controlled lab environments.
-- Do not target public, third-party, or production systems.
-- Use test-only credentials and non-sensitive data.
+- Use only authorized and isolated lab environments.
+- Do not test against production, public, or third-party systems.
+- Use test-only accounts and non-sensitive data.
+- Keep attacker and target traffic on lab-only network segments.
+- Use least-privilege accounts for Splunk and automation access.
 
-## Sensitive Data Handling
+## 2. Secret and Data Protection
 
-Before commit or push:
+Before every commit and push:
 
-- Remove tokens, passwords, and private keys.
-- Redact sensitive hostnames, usernames, and internal IP addresses.
-- Review screenshots and output files for secret exposure.
+- Never store passwords, API tokens, or private keys in repo files.
+- Keep secrets in local environment variables only.
+- Redact usernames, internal IPs, hostnames, and tokens in screenshots.
+- Review query outputs and generated notes for sensitive data exposure.
 
-## Reporting a Vulnerability
+## 3. Secure GitHub Deployment Practices
 
-If you identify a security issue in this repository:
+- Push from clean branches with reviewed changes.
+- Keep commits small and descriptive.
+- Verify `.gitignore` patterns are active before adding files.
+- Run secret checks before push.
+- Enable branch protections on `main`:
+	- Require pull requests
+	- Require review approval
+	- Require status checks
 
-1. Do not open a public issue with exploit details.
-2. Report privately to the repository owner through GitHub profile contact.
-3. Include affected file paths, reproduction steps, and impact summary.
+## 4. Minimum Pre-Push Checklist
 
-## Responsible Use
+- `git status` is clean except intended files.
+- No secrets in staged content.
+- No accidental artifacts (`.DS_Store`, archives, temp files).
+- Documentation matches current repository structure.
+- Screenshots are sanitized.
 
-- Follow applicable laws and organizational policies.
-- Keep testing within explicitly authorized scope.
-- Stop immediately if unintended systems or data are affected.
+## 5. Vulnerability Reporting
+
+If a security issue is found:
+
+1. Do not disclose exploit details publicly.
+2. Report privately to the repository owner via GitHub profile contact.
+3. Include affected files, reproduction steps, and impact summary.
