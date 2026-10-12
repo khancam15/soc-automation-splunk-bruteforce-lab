@@ -1,10 +1,6 @@
-# soc-automation-splunk-bruteforce-lab
+# SOC Automation and Detection Engineering Lab
 
-Simulated SMB brute-force attack -> Splunk detection engineering -> automated case note generation via Splunk REST API + Python.
-
-## SOC Automation and Detection Engineering Lab
-
-### SMB Brute Force Simulation -> Splunk Detection -> Automated Case Triage
+**SMB brute-force simulation → Splunk detection → automated case triage with Python and the Splunk REST API**
 
 ## Overview
 
