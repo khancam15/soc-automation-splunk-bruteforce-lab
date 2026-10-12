@@ -118,6 +118,28 @@ See WALKTHROUGH.md for the full step-by-step guide.
 - soc_automation.py (Splunk REST API automation; reads credentials from SPLUNK_USER and SPLUNK_PASS)
 - WALKTHROUGH.md
 
+## Built with AI Assistance
+
+I used Claude, Anthropic's AI assistant, as a working partner throughout this lab. I built and ran every part of the environment myself; Claude helped me plan, write, and troubleshoot.
+
+**How I used Claude**
+
+- **Planning:** mapped the attack, detection, and automation workflow before building the lab
+- **Python automation:** wrote and debugged `soc_automation.py`, which queries the Splunk REST API and generates triage case notes
+- **Documentation:** drafted and refined the README and WALKTHROUGH from my lab notes and screenshots
+- **Git troubleshooting:** resolved diverged branches, file naming problems, and `.gitignore` coverage for secrets
+
+**What I did myself**
+
+- Built the Kali Linux and Windows 11 virtual machines and the host-only network
+- Ran the SMB brute-force attack and wrote and tuned the Splunk SPL detection
+- Ran the script against live Splunk data and checked every output against the raw events
+
+**Responsible use**
+
+- No passwords, tokens, or real user data were ever shared with the AI assistant
+- Every AI-generated command and line of code was reviewed and tested before use
+
 ## Author
 
 Khaneil Campbell | khancam15
