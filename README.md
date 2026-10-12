@@ -92,6 +92,7 @@ soc-automation-splunk-bruteforce-lab/
 |-- .gitignore
 |-- README.md
 |-- CONTRIBUTING.md   # Branch, commit, and pull request conventions
+|-- LICENSE           # MIT License
 |-- SECURITY.md       # Lab and GitHub security practices
 |-- soc_automation.py # Splunk REST API triage and case note automation
 |-- WALKTHROUGH.md    # Step-by-step walkthrough
