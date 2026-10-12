@@ -96,6 +96,7 @@ soc-automation-splunk-bruteforce-lab/
 |-- .gitignore
 |-- README.md
 |-- SECURITY.md       # Lab and GitHub security practices
+|-- soc_automation.py # Splunk REST API triage and case note automation
 |-- WALKTHROUGH.md    # Step-by-step walkthrough
 ```
 
@@ -114,6 +115,7 @@ See WALKTHROUGH.md for the full step-by-step guide.
 - .gitignore
 - README.md
 - SECURITY.md (security policy and reporting guidance)
+- soc_automation.py (Splunk REST API automation; reads credentials from SPLUNK_USER and SPLUNK_PASS)
 - WALKTHROUGH.md
 
 ## Author
